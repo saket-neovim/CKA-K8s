@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+  labels:
+    env: demoRandom
+spec:
+  template:
+    metadata:
+      labels:
+        env: demo
+      name: nginx-new
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      env: demo

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: pod
+  name: pod
+spec:
+  containers:
+  - args:
+    - init-pod
+    image: nginx
+    name: pod
+    command: ['sh','-c','echo the app is running']
+  initContainers:
+  - name: init-container-1
+    image: nginx
+    command: ['echo', 'Container initialized']   

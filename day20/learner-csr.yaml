@@ -1,0 +1,11 @@
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: learner
+spec:
+  # Paste the output of the base64 command here (make sure it is one long line)
+  request: <REDACTED_CSR_BASE64>
+  signerName: kubernetes.io/kube-apiserver-client
+  expirationSeconds: 604800  # 1 week (7 days * 24 hours * 3600 seconds)
+  usages:
+  - client auth

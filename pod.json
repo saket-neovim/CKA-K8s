@@ -1,0 +1,22 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "nginx23",
+        "labels": {
+            "run": "nginx23"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "nginx23",
+                "image": "nginx",
+                "resources": {}
+            }
+        ],
+        "restartPolicy": "Always",
+        "dnsPolicy": "ClusterFirst"
+    },
+    "status": {}
+}

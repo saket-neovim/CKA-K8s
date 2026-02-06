@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx123
+  name: nginx-new
+spec:
+  containers:
+  - image: nginx
+    name: nginx123
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
