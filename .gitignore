@@ -7,3 +7,17 @@
 **/*.vault
 **/*.log
 **/.DS_Store
+
+# Local environment and editor artifacts
+.env
+.env.*
+!.env.example
+*.local
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Generated CSR/certificate exports and local kubeconfig
+*-csr-signed.yaml
+kubeconfig
+kubeconfig.*
